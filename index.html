@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio Docente — Universidad del Caribe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --uc-navy: #0D3B6E;
+  --uc-blue: #1769B5;
+  --uc-teal: #2E9E8E;
+  --uc-teal-light: #3BBDAB;
+  --uc-gold: #C8960C;
+  --uc-gold-light: #F5C842;
+  --uc-red: #D94035;
+  --bg-pale: #F4F8FF;
+  --bg-cream: #FAFBF7;
+  --text-dark: #1A2840;
+  --text-mid: #3D5470;
+  --text-soft: #6B84A0;
+  --white: #FFFFFF;
+  --border: #D8E4F0;
+  --shadow-sm: 0 2px 12px rgba(13,59,110,0.08);
+  --shadow-md: 0 8px 32px rgba(13,59,110,0.12);
+  --shadow-lg: 0 20px 60px rgba(13,59,110,0.16);
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-pale);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  background: linear-gradient(135deg, var(--uc-navy) 0%, #1254A3 60%, #1769B5 100%);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(13,59,110,0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-badge {
+  width: 48px;
+  height: 48px;
+  background: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--uc-navy);
+  letter-spacing: -1px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  color: var(--white);
+}
+
+.logo-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.logo-text span {
+  font-size: 12px;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.header-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.header-nav a:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: linear-gradient(160deg, var(--uc-navy) 0%, #0F4E8A 40%, #1A5E9A 70%, #1769B5 100%);
+  padding: 80px 32px 90px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--uc-gold-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 22px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--uc-gold-light);
+}
+
+.hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  max-width: 640px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--uc-gold);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(200,150,12,0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: #B8840A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200,150,12,0.5);
+}
+
+.btn-outline {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--uc-gold-light);
+  display: block;
+}
+
+.hero-stat .label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 300;
+  margin-top: 4px;
+}
+
+/* ─── SECTIONS ─── */
+section { padding: 72px 32px; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--uc-teal);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--uc-navy);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--text-mid);
+  font-weight: 300;
+  max-width: 680px;
+  line-height: 1.8;
+}
+
+/* ─── WHAT IS SECTION ─── */
+.what-is {
+  background: var(--white);
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.what-visual {
+  position: relative;
+}
+
+.portfolio-mockup {
+  background: var(--bg-pale);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+}
+
+.mock-header {
+  height: 10px;
+  background: linear-gradient(90deg, var(--uc-blue), var(--uc-teal));
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.mock-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--uc-blue), var(--uc-teal));
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.mock-line {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.mock-line.short { width: 60%; }
+.mock-line.med { width: 80%; }
+
+.mock-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 16px;
+  flex-wrap: wrap;
+}
+
+.mock-tab {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mock-tab.active { background: var(--uc-blue); color: white; }
+.mock-tab.inactive { background: var(--border); color: var(--text-soft); }
+
+.mock-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mock-card {
+  height: 48px;
+  border-radius: var(--radius-sm);
+  opacity: 0.6;
+}
+
+.what-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--uc-navy);
+  margin-bottom: 16px;
+}
+
+.what-content p {
+  color: var(--text-mid);
+  margin-bottom: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.benefit-list {
+  list-style: none;
+  margin-top: 28px;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  font-size: 15px;
+}
+
+.benefit-list li:last-child { border-bottom: none; }
+
+.benefit-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ─── STATS STRIP ─── */
+.stats-strip {
+  background: linear-gradient(135deg, var(--uc-teal) 0%, var(--uc-blue) 100%);
+  padding: 48px 32px;
+}
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-box .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+
+.stat-box .desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 6px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* ─── 12 SECTIONS ─── */
+.sections-guide {
+  background: var(--bg-pale);
+}
+
+.progress-bar {
+  background: var(--border);
+  height: 6px;
+  border-radius: 3px;
+  margin: 32px 0 48px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--uc-teal), var(--uc-blue));
+  border-radius: 3px;
+  transition: width 0.5s;
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.sections-nav {
+  position: sticky;
+  top: 90px;
+}
+
+.sections-nav-list {
+  list-style: none;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.sections-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.sections-nav-item:last-child { border-bottom: none; }
+
+.sections-nav-item:hover {
+  background: var(--bg-pale);
+  color: var(--uc-navy);
+}
+
+.sections-nav-item.active {
+  background: #EBF3FF;
+  color: var(--uc-blue);
+  border-left-color: var(--uc-blue);
+  font-weight: 600;
+}
+
+.nav-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.sections-nav-item.active .nav-number {
+  background: var(--uc-blue);
+  color: white;
+}
+
+.sections-nav-item.done .nav-number {
+  background: var(--uc-teal);
+  color: white;
+}
+
+.sections-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─── ACCORDION ─── */
+.accordion-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.accordion-item.open {
+  box-shadow: var(--shadow-md);
+  border-color: var(--uc-blue);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.accordion-trigger:hover { background: var(--bg-pale); }
+
+.acc-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.acc-title {
+  flex: 1;
+}
+
+.acc-title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--uc-navy);
+  margin-bottom: 2px;
+}
+
+.acc-title p {
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 300;
+}
+
+.acc-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-pale);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--text-mid);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.accordion-item.open .acc-toggle {
+  transform: rotate(45deg);
+  background: var(--uc-blue);
+  color: white;
+  border-color: var(--uc-blue);
+}
+
+.accordion-body {
+  display: none;
+  padding: 0 28px 28px;
+  animation: slideDown 0.3s ease;
+}
+
+.accordion-item.open .accordion-body { display: block; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  background: var(--bg-pale);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+}
+
+.info-card h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--uc-teal);
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.info-card ul {
+  list-style: none;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.info-card ul li::before {
+  content: '›';
+  color: var(--uc-blue);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.reflection-box {
+  background: linear-gradient(135deg, #EBF3FF, #E8F8F5);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--uc-blue);
+}
+
+.reflection-box h4 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--uc-blue);
+  margin-bottom: 8px;
+}
+
+.reflection-box p {
+  font-size: 14px;
+  color: var(--text-mid);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.checklist-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--uc-navy);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checklist li label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-mid);
+  transition: color 0.2s;
+  line-height: 1.5;
+}
+
+.checklist li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--uc-teal);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checklist li.checked label {
+  text-decoration: line-through;
+  color: var(--text-soft);
+}
+
+.moodle-tip {
+  background: #FFF8E8;
+  border: 1px solid #F5C842;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.moodle-tip .tip-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.moodle-tip p {
+  font-size: 13px;
+  color: #7A5800;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.moodle-tip strong { color: #5A3E00; }
+
+/* ─── CURRICULAR MAP ─── */
+.curricular {
+  background: var(--white);
+}
+
+.map-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 40px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.map-table thead tr {
+  background: var(--uc-navy);
+  color: var(--white);
+}
+
+.map-table thead th {
+  padding: 16px 22px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.map-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.map-table tbody tr:last-child { border-bottom: none; }
+.map-table tbody tr:hover { background: var(--bg-pale); }
+
+.map-table td {
+  padding: 16px 22px;
+  font-size: 14px;
+  color: var(--text-mid);
+  vertical-align: top;
+}
+
+.pilar-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #EBF3FF;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--uc-blue);
+}
+
+.evidence-text {
+  font-size: 13px;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+/* ─── RUBRIC ─── */
+.rubric {
+  background: var(--bg-pale);
+}
+
+.rubric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.rubric-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.rubric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.rubric-card:nth-child(1)::before { background: var(--uc-blue); }
+.rubric-card:nth-child(2)::before { background: var(--uc-teal); }
+.rubric-card:nth-child(3)::before { background: var(--uc-gold); }
+.rubric-card:nth-child(4)::before { background: var(--uc-red); }
+
+.rubric-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.rubric-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--uc-navy);
+  margin-bottom: 20px;
+}
+
+.level-row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.level-row:last-child { border-bottom: none; }
+
+.level-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.level-desc {
+  font-size: 13px;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.level-desarrollo .level-label { color: var(--uc-red); }
+.level-satisfactorio .level-label { color: var(--uc-gold); }
+.level-ejemplar .level-label { color: var(--uc-teal); }
+
+/* ─── CYCLE ─── */
+.cycle {
+  background: var(--white);
+}
+
+.cycle-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.cycle-step {
+  background: var(--bg-pale);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.cycle-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto 16px;
+  color: white;
+}
+
+.cycle-step h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--uc-navy);
+  margin-bottom: 8px;
+}
+
+.cycle-step p {
+  font-size: 14px;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ─── MOODLE TIPS ─── */
+.moodle-section {
+  background: var(--bg-pale);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.tip-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.tip-card .tip-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.tip-card .tip-emoji {
+  font-size: 28px;
+}
+
+.tip-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--uc-navy);
+}
+
+.tip-card p {
+  font-size: 14px;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.nomenclature-example {
+  background: var(--uc-navy);
+  color: var(--uc-gold-light);
+  font-family: monospace;
+  font-size: 13px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  margin-top: 14px;
+  line-height: 1.8;
+}
+
+/* ─── TIMELINE ─── */
+.timeline {
+  background: var(--white);
+}
+
+.timeline-list {
+  position: relative;
+  margin-top: 48px;
+  padding-left: 32px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--uc-teal), var(--uc-blue));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 40px 32px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--uc-blue);
+}
+
+.timeline-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--uc-navy);
+  margin-bottom: 4px;
+}
+
+.timeline-period {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--uc-teal);
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.timeline-goal {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #EBF3FF;
+  color: var(--uc-blue);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--uc-navy);
+  padding: 56px 32px 32px;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul li {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-col ul li a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover { color: var(--uc-gold-light); }
+
+.footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.accredited-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--uc-gold-light);
+  font-weight: 600;
+}
+
+/* ─── PROGRESS TRACKER ─── */
+.progress-tracker {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  z-index: 200;
+  min-width: 220px;
+  transition: transform 0.3s;
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tracker-header span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--uc-navy);
+}
+
+.tracker-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-soft);
+  line-height: 1;
+}
+
+.tracker-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.tracker-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--uc-teal), var(--uc-blue));
+  border-radius: 4px;
+  transition: width 0.5s;
+}
+
+.tracker-count {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .what-grid, .sections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sections-nav {
+    position: static;
+    display: none;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cycle-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-nav { display: none; }
+  .hero { padding: 60px 20px 70px; }
+  section { padding: 52px 20px; }
+  .hero-stats { gap: 28px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .cycle-steps { grid-template-columns: 1fr; }
+  .section-info-grid { grid-template-columns: 1fr; }
+  .progress-tracker { bottom: 16px; right: 16px; min-width: 180px; }
+}
+
+/* ─── SCROLL ANIMATION ─── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── BACK TO TOP ─── */
+.back-top {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--uc-navy);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 200;
+}
+
+.back-top.visible { opacity: 1; }
+.back-top:hover { transform: translateY(-3px); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-badge">UC</div>
+      <div class="logo-text">
+        <strong>Universidad del Caribe</strong>
+        <span>Panamá · 100% Acreditada</span>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#que-es">¿Qué es?</a>
+      <a href="#secciones">12 Secciones</a>
+      <a href="#mapa">Mapa Curricular</a>
+      <a href="#rubrica">Rúbrica</a>
+      <a href="#moodle">Moodle</a>
+      <a href="#cronograma">Cronograma</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-badge">Vicerrectoría Académica · Año 2026</div>
+  <h1>Construye tu <em>Portafolio Docente</em><br>paso a paso</h1>
+  <p>Una guía interactiva completa para elaborar y presentar tu trayectoria académica en la plataforma Moodle institucional de la Universidad del Caribe.</p>
+  <div class="hero-cta">
+    <a href="#secciones" class="btn-primary">🚀 Comenzar ahora</a>
+    <a href="#que-es" class="btn-outline">📖 Conocer más</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">12</span><span class="label">Secciones obligatorias</span></div>
+    <div class="hero-stat"><span class="num">6</span><span class="label">Pilares curriculares</span></div>
+    <div class="hero-stat"><span class="num">4</span><span class="label">Criterios de evaluación</span></div>
+    <div class="hero-stat"><span class="num">100%</span><span class="label">Guiado y práctico</span></div>
+  </div>
+</section>
+
+<!-- QUÉ ES -->
+<section class="what-is" id="que-es">
+  <div class="container">
+    <div class="section-label">Fundamento Conceptual</div>
+    <h2 class="section-title">¿Qué es el Portafolio Docente?</h2>
+    <p class="section-subtitle">Un espacio vivo donde documentas, reflexionas y visibilizas tu trayectoria profesional, innovaciones pedagógicas y compromiso con la excelencia académica.</p>
+
+    <div class="what-grid fade-in">
+      <div class="what-visual">
+        <div class="portfolio-mockup">
+          <div class="mock-header"></div>
+          <div style="display:flex;gap:16px;align-items:center;margin-bottom:18px;">
+            <div class="mock-avatar"></div>
+            <div style="flex:1">
+              <div class="mock-line med" style="height:10px;background:#1769B5;opacity:0.7;margin-bottom:6px;"></div>
+              <div class="mock-line short"></div>
+            </div>
+          </div>
+          <div class="mock-tabs">
+            <div class="mock-tab active">Identidad</div>
+            <div class="mock-tab inactive">Perfil</div>
+            <div class="mock-tab inactive">Filosofía</div>
+            <div class="mock-tab inactive">Evidencias</div>
+          </div>
+          <div class="mock-cards">
+            <div class="mock-card" style="background:linear-gradient(135deg,#EBF3FF,#D5E8FF);border:1px solid #C0D8F5;"></div>
+            <div class="mock-card" style="background:linear-gradient(135deg,#E8F8F5,#C5EDE6);border:1px solid #A8DDD4;"></div>
+            <div class="mock-card" style="background:linear-gradient(135deg,#FFF8E8,#FAECC8);border:1px solid #F5D878;"></div>
+            <div class="mock-card" style="background:linear-gradient(135deg,#F0F7FF,#E0EDFF);border:1px solid #C0D8F5;"></div>
+          </div>
+          <div style="margin-top:16px;">
+            <div class="mock-line med" style="height:7px;margin-bottom:8px;"></div>
+            <div class="mock-line short" style="height:7px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="what-content">
+        <h3>Más que un trámite administrativo</h3>
+        <p>El portafolio docente es una herramienta reflexiva y dinámica que integra evidencias seleccionadas de tu práctica pedagógica con narrativas reflexivas que dan cuenta del proceso de aprendizaje y crecimiento profesional.</p>
+        <p>A diferencia del currículo vitae, el portafolio no solo lista logros, sino que cuenta la historia de cómo enseñas, por qué lo haces de esa manera y cómo evoluciona tu práctica.</p>
+
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-icon" style="background:#EBF3FF;">📊</div>
+            <div><strong style="color:var(--uc-navy);">Visibiliza tu impacto</strong><br>Demuestra con evidencias concretas la calidad de tu docencia ante la institución y la comunidad académica.</div>
+          </li>
+          <li>
+            <div class="benefit-icon" style="background:#E8F8F5;">🔄</div>
+            <div><strong style="color:var(--uc-navy);">Promueve la reflexión</strong><br>Incentiva el análisis crítico de tu práctica, identificando fortalezas y áreas de mejora continua.</div>
+          </li>
+          <li>
+            <div class="benefit-icon" style="background:#FFF8E8;">🎯</div>
+            <div><strong style="color:var(--uc-navy);">Alinea con el currículo UC</strong><br>Conecta tu docencia con los pilares del Modelo Educativo institucional y el perfil de egreso.</div>
+          </li>
+          <li>
+            <div class="benefit-icon" style="background:#F0E8FF;">⭐</div>
+            <div><strong style="color:var(--uc-navy);">Apoya tu evaluación docente</strong><br>Sirve como evidencia organizada en procesos de promoción, acreditación y reconocimiento profesional.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-box fade-in">
+      <span class="number">87%</span>
+      <div class="desc">de docentes con portafolio<br>activo mejoran sus evaluaciones</div>
+    </div>
+    <div class="stat-box fade-in">
+      <span class="number">3×</span>
+      <div class="desc">mayor probabilidad de lograr<br>el nivel Ejemplar con reflexión continua</div>
+    </div>
+    <div class="stat-box fade-in">
+      <span class="number">22</span>
+      <div class="desc">páginas de guía práctica<br>condensadas en esta herramienta</div>
+    </div>
+    <div class="stat-box fade-in">
+      <span class="number">100%</span>
+      <div class="desc">alineado al Modelo Educativo<br>de la Universidad del Caribe</div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 SECCIONES -->
+<section class="sections-guide" id="secciones">
+  <div class="container">
+    <div class="section-label">Guía Paso a Paso</div>
+    <h2 class="section-title">Las 12 Secciones del Portafolio</h2>
+    <p class="section-subtitle">Desarrolla cada sección con profundidad. Haz clic en cualquiera para ver su guía completa, ejemplos y lista de verificación.</p>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="mainProgress" style="width:0%"></div>
+    </div>
+
+    <div class="sections-grid">
+      <nav class="sections-nav">
+        <ul class="sections-nav-list" id="sectionNav">
+          <li class="sections-nav-item active" onclick="scrollToSection(0)"><div class="nav-number">1</div>Portada e Identidad</li>
+          <li class="sections-nav-item" onclick="scrollToSection(1)"><div class="nav-number">2</div>Perfil Académico</li>
+          <li class="sections-nav-item" onclick="scrollToSection(2)"><div class="nav-number">3</div>Formación Profesional</li>
+          <li class="sections-nav-item" onclick="scrollToSection(3)"><div class="nav-number">4</div>Experiencia Docente</li>
+          <li class="sections-nav-item" onclick="scrollToSection(4)"><div class="nav-number">5</div>Filosofía Educativa</li>
+          <li class="sections-nav-item" onclick="scrollToSection(5)"><div class="nav-number">6</div>Evidencias de Práctica</li>
+          <li class="sections-nav-item" onclick="scrollToSection(6)"><div class="nav-number">7</div>Proyectos e Innovación</li>
+          <li class="sections-nav-item" onclick="scrollToSection(7)"><div class="nav-number">8</div>Producción Académica</li>
+          <li class="sections-nav-item" onclick="scrollToSection(8)"><div class="nav-number">9</div>Competencias</li>
+          <li class="sections-nav-item" onclick="scrollToSection(9)"><div class="nav-number">10</div>Reflexión y Mejora</li>
+          <li class="sections-nav-item" onclick="scrollToSection(10)"><div class="nav-number">11</div>Reconocimientos</li>
+          <li class="sections-nav-item" onclick="scrollToSection(11)"><div class="nav-number">12</div>Información de Contacto</li>
+        </ul>
+      </nav>
+
+      <div class="sections-content-area" id="sectionsArea">
+
+        <!-- SECCIÓN 1 -->
+        <div class="accordion-item open" data-section="0">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#1769B5,#0D3B6E);">1</div>
+            <div class="acc-title">
+              <h3>Portada e Identidad Profesional</h3>
+              <p>Primera impresión que refleja tu identidad como educador</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Crear una primera impresión profesional que refleje tu identidad como educador y establezca el tono para todo el portafolio.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Banner de bienvenida atractivo</li>
+                  <li>Foto de perfil profesional (fondo neutro, alta calidad)</li>
+                  <li>Nombre completo con credenciales académicas</li>
+                  <li>Cargo, departamento y facultad</li>
+                  <li>Frase de misión personal como educador</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Qué imagen quiero proyectar como docente? ¿Cuál es la esencia de mi vocación educativa? ¿Cómo quiero que mis estudiantes me recuerden?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist" id="cl-1">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Banner o imagen de bienvenida subido correctamente</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Foto de perfil profesional de alta calidad</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Nombre con credenciales académicas visibles</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Cargo y departamento/facultad indicados</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Frase de misión personal publicada</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Etiqueta</strong> para el banner y la foto. Usa <strong>Página</strong> para el texto introductorio y la frase de misión.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 2 -->
+        <div class="accordion-item" data-section="1">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#2E9E8E,#1769B5);">2</div>
+            <div class="acc-title">
+              <h3>Perfil Académico y Profesional</h3>
+              <p>Tu trayectoria y metas profesionales</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Presentar tu trayectoria académica y profesional, definiendo metas claras a corto y largo plazo que guíen tu desarrollo.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Resumen biográfico (experiencia y especializaciones)</li>
+                  <li>Objetivos profesionales a corto plazo (1-2 años)</li>
+                  <li>Objetivos profesionales a largo plazo (5+ años)</li>
+                  <li>Enlace a LinkedIn, ORCID o ResearchGate</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Cuáles son mis principales fortalezas como docente? ¿Qué quiero lograr en los próximos 3 años? ¿Cómo mi trayectoria me prepara para los retos actuales de la educación superior?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Resumen biográfico redactado (1-2 párrafos concisos)</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Objetivos a corto plazo definidos con indicadores</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Objetivos a largo plazo definidos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Enlace a perfil profesional externo incluido</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para la biografía y objetivos. Usa <strong>URL</strong> para vincular a tus redes profesionales externas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 3 -->
+        <div class="accordion-item" data-section="2">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#C8960C,#E8B800);">3</div>
+            <div class="acc-title">
+              <h3>Formación y Desarrollo Profesional</h3>
+              <p>Formación académica y actualización continua</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Documentar de manera organizada toda tu formación académica formal y la actualización continua que evidencia tu compromiso con el aprendizaje permanente.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Títulos académicos con institución y año</li>
+                  <li>Certificaciones y diplomas relevantes</li>
+                  <li>Copias digitales de todos los documentos (PDF)</li>
+                  <li>Cursos, talleres, seminarios y congresos recientes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Mis certificaciones están actualizadas? ¿Qué formación adicional necesito para responder mejor a las demandas del campo? ¿Cómo mi formación se alinea con el perfil de egreso de mis programas?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Títulos académicos listados con institución y año</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Certificaciones relevantes documentadas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Copias digitales subidas en formato PDF</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Carpetas organizadas por tipo de formación</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Archivo</strong> para PDFs de certificados. Usa <strong>Carpeta</strong> para agrupar por tipo. Usa <strong>Página</strong> para el listado organizado.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 4 -->
+        <div class="accordion-item" data-section="3">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#D94035,#B5341F);">4</div>
+            <div class="acc-title">
+              <h3>Experiencia Docente</h3>
+              <p>Tu trayectoria como educador en la UC y otras instituciones</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Detallar con precisión tu trayectoria como educador, destacando no solo qué has enseñado, sino los logros y contribuciones que definen tu práctica.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Asignaturas impartidas con período y nivel</li>
+                  <li>Responsabilidades académicas adicionales</li>
+                  <li>Participación en comités y coordinaciones</li>
+                  <li>Al menos 2-3 logros destacados en docencia</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Qué cursos han marcado mi carrera docente? ¿Qué logro me genera mayor orgullo? ¿Cómo ha evolucionado mi práctica desde mis primeros años en el aula?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Listado completo de asignaturas impartidas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Períodos y niveles especificados en cada asignatura</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Responsabilidades adicionales documentadas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 2-3 logros destacados incluidos</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para describir la experiencia narrativamente. Usa <strong>Base de Datos</strong> para crear un registro consultable por asignatura o período.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 5 -->
+        <div class="accordion-item" data-section="4">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#7B4FBF,#5B2FA0);">5</div>
+            <div class="acc-title">
+              <h3>Filosofía y Metodología Educativa</h3>
+              <p>Tu enfoque pedagógico y conexión con el diseño curricular UC</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Articular de forma coherente y reflexiva tu enfoque pedagógico, mostrando cómo tus metodologías se conectan con el Modelo Educativo de la UC.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Declaración de filosofía docente (ensayo reflexivo, mín. 1 página)</li>
+                  <li>Metodologías: ABP, clase invertida, aprendizaje colaborativo</li>
+                  <li>Estrategias de evaluación con ejemplos concretos</li>
+                  <li>Conexión explícita con el Modelo Educativo UC</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión — Clave Curricular</h4>
+              <p>¿Por qué enseño de la manera en que lo hago? ¿Cómo mis métodos responden al perfil de egreso? ¿Mis estrategias promueven el aprendizaje significativo y el desarrollo de competencias? ¿Cómo operacionalizo el modelo educativo en mi aula?</p>
+            </div>
+            <div style="background:#EBF3FF;border-radius:8px;padding:14px 18px;margin-bottom:16px;border-left:4px solid var(--uc-teal);">
+              <p style="font-size:13px;color:var(--text-mid);"><strong style="color:var(--uc-teal);">⭐ Vinculación Curricular Clave:</strong> Esta sección conecta directamente con el pilar de <em>Aprendizaje centrado en el estudiante</em> del Modelo Educativo UC. Menciona explícitamente cómo tus métodos implementan este principio.</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Filosofía docente redactada (mínimo 1 página completa)</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 2 metodologías descritas con ejemplos reales</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Estrategias de evaluación documentadas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Conexión explícita con el Modelo Educativo UC</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para el ensayo filosófico. Usa <strong>Archivo</strong> para subir esquemas o mapas conceptuales de tu metodología.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 6 -->
+        <div class="accordion-item" data-section="5">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#0D8A6E,#0A6B54);">6</div>
+            <div class="acc-title">
+              <h3>Evidencias de Práctica Docente</h3>
+              <p>Ejemplos concretos de la calidad de tu labor pedagógica</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Demostrar con evidencias tangibles y bien documentadas la calidad y variedad de tu trabajo pedagógico, desde la planificación hasta la retroalimentación.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Planificaciones de curso / syllabus (mínimo 2 recientes)</li>
+                  <li>Materiales didácticos originales creados</li>
+                  <li>Diseño de actividades de aprendizaje innovadoras</li>
+                  <li>Rúbricas e instrumentos de evaluación</li>
+                  <li>Retroalimentación a estudiantes (anonimizada)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Este material refleja mi filosofía pedagógica? ¿Mis rúbricas están alineadas al currículo? ¿Mi retroalimentación es constructiva, oportuna y promueve el crecimiento del estudiante?</p>
+            </div>
+            <div style="background:#F0FFF8;border-radius:8px;padding:14px 18px;margin-bottom:16px;border-left:4px solid var(--uc-teal);">
+              <p style="font-size:13px;color:var(--text-mid);"><strong style="color:var(--uc-teal);">✏️ Organización sugerida:</strong> Crea una carpeta por asignatura. Dentro incluye subcarpetas: Planificación, Materiales, Evaluaciones, Retroalimentación. <em>Cada evidencia debe ir acompañada de una breve reflexión de 3-5 líneas.</em></p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 2 syllabus recientes incluidos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Materiales didácticos propios subidos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Ejemplos de actividades de aprendizaje diseñadas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Rúbricas o instrumentos de evaluación incluidos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Retroalimentación constructiva anonimizada</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Cada evidencia con reflexión escrita adjunta</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Carpeta</strong> para organizar materiales por asignatura. Usa <strong>Archivo</strong> para documentos. Usa <strong>URL</strong> para videos y recursos en línea.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 7 -->
+        <div class="accordion-item" data-section="6">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#E8A020,#C87010);">7</div>
+            <div class="acc-title">
+              <h3>Proyectos e Innovaciones Educativas</h3>
+              <p>Iniciativas que trascienden el aula y generan impacto</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Destacar iniciativas pedagógicas innovadoras que van más allá del aula, mostrando tu capacidad para generar cambios significativos en el aprendizaje y en el currículo.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Proyectos de innovación: descripción, objetivos, resultados</li>
+                  <li>Recursos Educativos Abiertos (REA) desarrollados</li>
+                  <li>Participación en rediseño curricular</li>
+                  <li>Colaboraciones interdisciplinarias</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Qué impacto medible tuvo mi innovación en el aprendizaje? ¿Cómo contribuyó al currículo institucional? ¿Qué aprendí de este proceso que puedo replicar o escalar?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 1 proyecto documentado completamente</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Objetivos, metodología y resultados descritos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Evidencias de impacto incluidas (datos, testimonios)</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Participación en rediseño curricular documentada (si aplica)</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para describir proyectos. Usa <strong>Carpeta</strong> para guardar evidencias. Usa <strong>URL</strong> para enlazar REA publicados en repositorios externos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 8 -->
+        <div class="accordion-item" data-section="7">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#1A7AB5,#0D5C90);">8</div>
+            <div class="acc-title">
+              <h3>Producción Académica e Investigación</h3>
+              <p>Tu contribución al conocimiento en tu disciplina</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Mostrar tu contribución activa al avance del conocimiento en tu disciplina, evidenciando la articulación entre investigación y docencia.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Publicaciones: artículos, capítulos de libros, ponencias</li>
+                  <li>Proyectos de investigación activos o finalizados</li>
+                  <li>Dirección de tesis de grado y posgrado</li>
+                  <li>Participación en redes de investigación</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Cómo mi investigación retroalimenta directamente mi docencia? ¿Mis publicaciones son relevantes al currículo de los programas que imparto? ¿Estoy formando investigadores a través de mi práctica?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Publicaciones con datos bibliográficos completos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Copias digitales o enlaces de acceso incluidos</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Proyectos de investigación descritos con estado actual</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Tesis dirigidas listadas con detalles relevantes</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Archivo</strong> para PDFs. Usa <strong>Glosario</strong> o <strong>Base de Datos</strong> para crear un catálogo consultable. Usa <strong>URL</strong> para publicaciones en línea.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 9 -->
+        <div class="accordion-item" data-section="8">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#2E9E8E,#1A7A6E);">9</div>
+            <div class="acc-title">
+              <h3>Competencias y Habilidades</h3>
+              <p>Competencias transversales y técnicas que te distinguen</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Resaltar de forma visual y documentada el conjunto de competencias pedagógicas, digitales y lingüísticas que te diferencian como docente del siglo XXI.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Competencias pedagógicas: diseño curricular, evaluación, tutoría</li>
+                  <li>Competencias digitales: Moodle, software especializado, herramientas colaborativas</li>
+                  <li>Competencias lingüísticas e interculturales</li>
+                  <li>Áreas de mejora identificadas honestamente</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Qué competencias me diferencian en el campo? ¿Qué habilidades debo desarrollar para responder mejor a las necesidades de mis estudiantes y del entorno laboral actual?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Competencias pedagógicas con nivel de dominio indicado</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Competencias digitales con evidencias adjuntas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Competencias lingüísticas indicadas con nivel (A1-C2)</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Áreas de mejora identificadas con honestidad</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> con presentación visual de competencias. Puedes usar tablas o barras de progreso para mostrar el nivel de dominio de forma atractiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 10 -->
+        <div class="accordion-item" data-section="9">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#D94035,#A02A20);">10</div>
+            <div class="acc-title">
+              <h3>Reflexión y Mejora Continua</h3>
+              <p>El corazón del portafolio — tu compromiso con el crecimiento</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div style="background:linear-gradient(135deg,#FFF3E0,#FFE8CC);border-radius:8px;padding:16px 20px;margin-bottom:18px;border-left:4px solid #E8A020;">
+              <p style="font-size:14px;color:#7A4800;"><strong>⭐ Corazón del Portafolio:</strong> Esta es la sección más valorada en la rúbrica. Escribe con honestidad sobre retos, fracasos y transformaciones. La reflexión genuina es lo que distingue un portafolio Ejemplar de uno Satisfactorio.</p>
+            </div>
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Demostrar un compromiso activo y auténtico con el crecimiento profesional continuo, mostrando capacidad de análisis crítico sobre tu propia práctica.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Bitácora reflexiva con entradas periódicas (mín. 3/año)</li>
+                  <li>Plan de desarrollo profesional con metas SMART</li>
+                  <li>Análisis crítico de evaluaciones docentes recibidas</li>
+                  <li>Acciones de mejora concretas implementadas</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión Profunda</h4>
+              <p>¿Qué aprendí este período? ¿Cómo usé la retroalimentación de mis estudiantes para mejorar? ¿Mi plan de desarrollo está alineado al crecimiento institucional? ¿Qué cambiaría si volviera a enseñar este curso?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 3 entradas reflexivas del año académico</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Plan de desarrollo con metas SMART claramente definidas</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Análisis reflexivo de evaluación docente incluido</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Acciones de mejora documentadas con resultados</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para la bitácora reflexiva principal. Usa <strong>Glosario</strong> para entradas organizadas por tema o fecha académica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 11 -->
+        <div class="accordion-item" data-section="10">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#8A5ABF,#6A3A9F);">11</div>
+            <div class="acc-title">
+              <h3>Reconocimientos y Testimonios</h3>
+              <p>Validación externa sobre la calidad de tu desempeño</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Aportar validación externa y social que corrobore la calidad de tu desempeño, la coherencia entre filosofía declarada y práctica real.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Premios y distinciones recibidos (con evidencia)</li>
+                  <li>Testimonios de pares, directivos o estudiantes</li>
+                  <li>Cartas de recomendación o reconocimiento</li>
+                  <li>Autorización escrita de cada persona que testimonia</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Preguntas de Reflexión</h4>
+              <p>¿Qué reconocimientos reflejan mejor mi contribución a la educación? ¿Los testimonios confirman coherencia entre mi filosofía declarada y mi práctica cotidiana?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Premios documentados con evidencia (copia o fotografía)</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Testimonios con autorización firmada de cada persona</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Al menos 1-2 testimonios de fuentes diferentes</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Página</strong> para presentar reconocimientos narrativamente. Usa <strong>Archivo</strong> para subir copias digitales de diplomas y cartas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN 12 -->
+        <div class="accordion-item" data-section="11">
+          <div class="accordion-trigger" onclick="toggleAccordion(this)">
+            <div class="acc-number" style="background:linear-gradient(135deg,#2E9E8E,#0D3B6E);">12</div>
+            <div class="acc-title">
+              <h3>Información de Contacto</h3>
+              <p>Facilita la comunicación y colaboración académica</p>
+            </div>
+            <div class="acc-toggle">+</div>
+          </div>
+          <div class="accordion-body">
+            <div class="section-info-grid">
+              <div class="info-card">
+                <h4>🎯 Objetivo</h4>
+                <p>Facilitar la comunicación efectiva y la colaboración académica, asegurando que estudiantes, colegas y evaluadores puedan contactarte fácilmente.</p>
+              </div>
+              <div class="info-card">
+                <h4>📋 Contenido a incluir</h4>
+                <ul>
+                  <li>Correo electrónico institucional visible y actualizado</li>
+                  <li>Horario de atención a estudiantes</li>
+                  <li>Enlace al directorio universitario</li>
+                  <li>Redes académicas (LinkedIn, ORCID, ResearchGate)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reflection-box">
+              <h4>💭 Pregunta de Reflexión</h4>
+              <p>¿Mi información está actualizada y es accesible para todos? ¿Mi horario de atención refleja disponibilidad real para acompañar a mis estudiantes?</p>
+            </div>
+            <div class="checklist-title">✅ Checklist de Verificación</div>
+            <ul class="checklist">
+              <li><label><input type="checkbox" onchange="updateProgress()"> Correo institucional visible y actualizado</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Horario de atención a estudiantes publicado</label></li>
+              <li><label><input type="checkbox" onchange="updateProgress()"> Enlace al directorio universitario funcional</label></li>
+            </ul>
+            <div class="moodle-tip">
+              <span class="tip-icon">💡</span>
+              <p><strong>Herramienta Moodle:</strong> Usa <strong>Etiqueta</strong> para mostrar datos de contacto visualmente destacados. Usa <strong>URL</strong> para enlazar al directorio institucional.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA CURRICULAR -->
+<section class="curricular" id="mapa">
+  <div class="container">
+    <div class="section-label">Modelo Educativo UC</div>
+    <h2 class="section-title">Mapa de Alineación Curricular</h2>
+    <p class="section-subtitle">Cada sección de tu portafolio responde a un pilar del Modelo Educativo institucional. Comprender esta conexión le da coherencia y propósito a cada evidencia que incluyes.</p>
+
+    <table class="map-table fade-in">
+      <thead>
+        <tr>
+          <th>Pilar del Modelo Educativo</th>
+          <th>Sección del Portafolio</th>
+          <th>Evidencia Sugerida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pilar-badge" style="background:#EBF3FF;color:#1769B5;">🎓 Aprendizaje centrado<br>en el estudiante</span></td>
+          <td><span class="sec-tag">5 · Filosofía y Metodología</span></td>
+          <td class="evidence-text">Declaración filosófica, actividades participativas y estrategias de aprendizaje activo</td>
+        </tr>
+        <tr>
+          <td><span class="pilar-badge" style="background:#E8F8F5;color:#1A7A6E;">🔧 Desarrollo de<br>competencias</span></td>
+          <td><span class="sec-tag">6 · Evidencias de Práctica</span></td>
+          <td class="evidence-text">Sílabos alineados a competencias, rúbricas, instrumentos de evaluación auténtica</td>
+        </tr>
+        <tr>
+          <td><span class="pilar-badge" style="background:#F0E8FF;color:#6A3A9F;">🌐 Formación integral</span></td>
+          <td><span class="sec-tag">7 · Proyectos e Innovación</span></td>
+          <td class="evidence-text">Proyectos interdisciplinarios, actividades de extensión, aprendizaje-servicio</td>
+        </tr>
+        <tr>
+          <td><span class="pilar-badge" style="background:#FFF8E8;color:#7A5800;">💻 Uso de TIC</span></td>
+          <td><span class="sec-tag">9 · Competencias</span></td>
+          <td class="evidence-text">Cursos desarrollados en Moodle, recursos digitales, herramientas interactivas</td>
+        </tr>
+        <tr>
+          <td><span class="pilar-badge" style="background:#FFF0EE;color:#B5341F;">🔄 Mejora continua</span></td>
+          <td><span class="sec-tag">10 · Reflexión y Mejora</span></td>
+          <td class="evidence-text">Bitácora reflexiva, plan de desarrollo profesional con metas SMART</td>
+        </tr>
+        <tr>
+          <td><span class="pilar-badge" style="background:#E8F8F5;color:#0D5C90;">📚 Calidad académica</span></td>
+          <td><span class="sec-tag">8 · Investigación</span></td>
+          <td class="evidence-text">Publicaciones arbitradas, ponencias en congresos, proyectos de investigación</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background:linear-gradient(135deg,#EBF3FF,#E8F8F5);border-radius:var(--radius);padding:24px 28px;margin-top:32px;border:1px solid var(--border);">
+      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;"><strong style="color:var(--uc-navy);">⭐ Vinculación Curricular:</strong> Cada vez que agregues una evidencia a tu portafolio, pregúntate: <em>«¿Cómo esta práctica contribuye a formar al profesional que el currículo busca desarrollar?»</em> Esta pregunta transformará tus evidencias de simples documentos en demostraciones reflexivas de impacto pedagógico.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RÚBRICA -->
+<section class="rubric" id="rubrica">
+  <div class="container">
+    <div class="section-label">Criterios de Evaluación</div>
+    <h2 class="section-title">Rúbrica de Calidad del Portafolio</h2>
+    <p class="section-subtitle">Tu portafolio será evaluado en cuatro dimensiones. Conoce qué se espera para alcanzar el nivel Ejemplar en cada criterio.</p>
+
+    <div class="rubric-grid fade-in">
+      <div class="rubric-card">
+        <div class="rubric-icon">🗂️</div>
+        <h3>Claridad y Coherencia</h3>
+        <div class="level-row level-desarrollo">
+          <div class="level-label">EN DESARROLLO (2-3)</div>
+          <div class="level-desc">Estructura parcial, secciones incompletas, narrativa fragmentada sin hilo conductor.</div>
+        </div>
+        <div class="level-row level-satisfactorio">
+          <div class="level-label">SATISFACTORIO (4)</div>
+          <div class="level-desc">Bien organizado, fácil de navegar, con coherencia entre las secciones.</div>
+        </div>
+        <div class="level-row level-ejemplar">
+          <div class="level-label">EJEMPLAR (5)</div>
+          <div class="level-desc">Narrativa integradora excepcional que cuenta una historia docente coherente y poderosa.</div>
+        </div>
+      </div>
+
+      <div class="rubric-card">
+        <div class="rubric-icon">💡</div>
+        <h3>Profundidad Reflexiva</h3>
+        <div class="level-row level-desarrollo">
+          <div class="level-label">EN DESARROLLO (2-3)</div>
+          <div class="level-desc">Descriptiva, análisis limitado, no va más allá de lo superficial.</div>
+        </div>
+        <div class="level-row level-satisfactorio">
+          <div class="level-label">SATISFACTORIO (4)</div>
+          <div class="level-desc">Conecta teoría con práctica, muestra análisis con sustento pedagógico.</div>
+        </div>
+        <div class="level-row level-ejemplar">
+          <div class="level-label">EJEMPLAR (5)</div>
+          <div class="level-desc">Reflexiones transformadoras que evidencian cambios reales en la práctica docente.</div>
+        </div>
+      </div>
+
+      <div class="rubric-card">
+        <div class="rubric-icon">📁</div>
+        <h3>Calidad de Evidencias</h3>
+        <div class="level-row level-desarrollo">
+          <div class="level-label">EN DESARROLLO (2-3)</div>
+          <div class="level-desc">Limitadas, sin contexto ni reflexión que explique su relevancia.</div>
+        </div>
+        <div class="level-row level-satisfactorio">
+          <div class="level-label">SATISFACTORIO (4)</div>
+          <div class="level-desc">Pertinentes y debidamente documentadas con contexto claro.</div>
+        </div>
+        <div class="level-row level-ejemplar">
+          <div class="level-label">EJEMPLAR (5)</div>
+          <div class="level-desc">Sobresalientes, diversas, reflexivas; cada una demuestra impacto concreto.</div>
+        </div>
+      </div>
+
+      <div class="rubric-card">
+        <div class="rubric-icon">🎨</div>
+        <h3>Presentación y Diseño</h3>
+        <div class="level-row level-desarrollo">
+          <div class="level-label">EN DESARROLLO (2-3)</div>
+          <div class="level-desc">Básico, inconsistencias visuales, navegación confusa y poco profesional.</div>
+        </div>
+        <div class="level-row level-satisfactorio">
+          <div class="level-label">SATISFACTORIO (4)</div>
+          <div class="level-desc">Profesional y consistente, navegación intuitiva y presentación clara.</div>
+        </div>
+        <div class="level-row level-ejemplar">
+          <div class="level-label">EJEMPLAR (5)</div>
+          <div class="level-desc">Innovador, uso avanzado y creativo de las herramientas de Moodle.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--uc-navy);color:white;border-radius:var(--radius);padding:28px 32px;margin-top:32px;text-align:center;">
+      <p style="font-size:18px;font-family:'Playfair Display',serif;margin-bottom:12px;">🌟 Meta: Nivel Ejemplar</p>
+      <p style="font-size:15px;opacity:0.85;font-weight:300;line-height:1.8;max-width:600px;margin:0 auto;">Asegúrate de que cada evidencia tenga reflexión, que tu portafolio cuente una historia coherente y que el diseño invite a explorarlo. <strong>La excelencia está en los detalles.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO CÍCLICO -->
+<section class="cycle" id="proceso">
+  <div class="container">
+    <div class="section-label">Metodología de Construcción</div>
+    <h2 class="section-title">Proceso Cíclico de Construcción</h2>
+    <p class="section-subtitle">El portafolio no se construye de una vez; es un proceso iterativo que se enriquece con el tiempo. Sigue estas seis fases para lograr un portafolio integral.</p>
+
+    <div class="cycle-steps fade-in">
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#1769B5,#0D3B6E);">1</div>
+        <h3>Recopilación</h3>
+        <p>Reúne documentos, materiales y evidencias de tu práctica. Crea una carpeta temporal donde almacenes todo lo relevante sin filtrar aún.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#2E9E8E,#1A7A6E);">2</div>
+        <h3>Selección</h3>
+        <p>Elige las evidencias más significativas. Prioriza calidad sobre cantidad. Cada pieza debe tener un propósito claro y demostrable.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#C8960C,#A07800);">3</div>
+        <h3>Reflexión</h3>
+        <p>Escribe narrativas que contextualicen cada evidencia. ¿Por qué la elegiste? ¿Qué demuestra de tu práctica? ¿Qué aprendiste?</p>
+      </div>
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#D94035,#A02A20);">4</div>
+        <h3>Organización</h3>
+        <p>Estructura evidencias y reflexiones en las 12 secciones dentro de Moodle de forma coherente y navegable.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#7B4FBF,#5B2FA0);">5</div>
+        <h3>Presentación</h3>
+        <p>Diseña tu espacio de manera profesional, visualmente atractiva y con navegación intuitiva que invite a explorar.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="step-num" style="background:linear-gradient(135deg,#0D8A6E,#0A5A48);">6</div>
+        <h3>Socialización</h3>
+        <p>Comparte con pares o mentores para obtener retroalimentación constructiva que enriquezca y fortalezca tu portafolio.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--bg-pale);border-radius:var(--radius);padding:22px 28px;margin-top:32px;border:1px solid var(--border);display:flex;gap:16px;align-items:center;">
+      <span style="font-size:28px;">⏰</span>
+      <p style="font-size:15px;color:var(--text-mid);font-weight:300;line-height:1.7;"><strong style="color:var(--uc-navy);">Rutina recomendada:</strong> Dedica <strong>2-3 horas por semana durante las primeras 4 semanas</strong> para construir la base. Luego, <strong>1 hora mensual</strong> para mantener, actualizar y enriquecer tu portafolio con nuevas reflexiones y evidencias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MOODLE TIPS -->
+<section class="moodle-section" id="moodle">
+  <div class="container">
+    <div class="section-label">Implementación Técnica</div>
+    <h2 class="section-title">Consejos Prácticos para Moodle</h2>
+    <p class="section-subtitle">Aprovecha al máximo las herramientas de la plataforma institucional para crear un portafolio profesional, accesible y de fácil navegación.</p>
+
+    <div class="tips-grid fade-in">
+      <div class="tip-card">
+        <div class="tip-head">
+          <span class="tip-emoji">⚙️</span>
+          <h3>Configuración Inicial</h3>
+        </div>
+        <p>Tu espacio estará preconfigurado en formato de temas o pestañas. Serás el único con rol de Profesor. Verifica que cada tema corresponda a una de las 12 secciones y renombra las secciones según esta guía.</p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-head">
+          <span class="tip-emoji">🎨</span>
+          <h3>Consistencia Visual</h3>
+        </div>
+        <p>Mantén tipografía, colores y formatos uniformes en todo el portafolio. Usa los colores institucionales de la UC. La coherencia visual comunica profesionalismo y cuidado en cada detalle.</p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-head">
+          <span class="tip-emoji">🧭</span>
+          <h3>Navegabilidad</h3>
+        </div>
+        <p>Asigna nombres claros e intuitivos a cada recurso. El visitante debe poder encontrar cualquier sección en máximo 2 clics. Usa una sección de índice al inicio con enlaces a cada parte.</p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-head">
+          <span class="tip-emoji">♿</span>
+          <h3>Accesibilidad</h3>
+        </div>
+        <p>Incluye texto alternativo en todas las imágenes, subtítulos en videos y asegúrate que los colores tengan contraste suficiente. Un portafolio accesible demuestra conciencia sobre la diversidad.</p>
+      </div>
+
+      <div class="tip-card" style="grid-column: 1 / -1;">
+        <div class="tip-head">
+          <span class="tip-emoji">📁</span>
+          <h3>Nomenclatura de Archivos</h3>
+        </div>
+        <p>Usa el siguiente formato estándar para nombrar todos tus archivos. Esta convención facilita la organización, búsqueda y mantenimiento del portafolio a largo plazo:</p>
+        <div class="nomenclature-example">
+          [Asignatura]_[TipoDocumento]_[Período]<br><br>
+          Ejemplos:<br>
+          AdmonEmpresas_Syllabus_2026-I<br>
+          MetInvestigacion_Rubrica_Parcial1<br>
+          FinanzasEmp_MaterialDidactico_2026-II<br>
+          Estadistica_PlanReflexivo_2026-I
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section class="timeline" id="cronograma">
+  <div class="container">
+    <div class="section-label">Planificación Institucional</div>
+    <h2 class="section-title">Cronograma de Trabajo 2025–2026</h2>
+    <p class="section-subtitle">Organiza tu tiempo según las fases institucionales. Un avance planificado garantiza un portafolio completo y de calidad al final del período académico.</p>
+
+    <div class="timeline-list fade-in">
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--uc-blue);"></div>
+        <div class="timeline-period">Nov 2025 – Ene 2026</div>
+        <h3>Fase 1: Comprensión del Marco</h3>
+        <p>Socialización del portafolio docente, talleres de capacitación y lectura detallada de los Lineamientos Institucionales. Accede a Moodle y verifica tus credenciales de acceso activas.</p>
+        <span class="timeline-goal">Meta: Comprender el marco conceptual y normativo</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--uc-teal);"></div>
+        <div class="timeline-period">Feb – Jun 2026</div>
+        <h3>Fase 2: Construcción Base</h3>
+        <p>Elaboración de las secciones 1 a 6: Identidad, Perfil, Formación, Experiencia, Filosofía y Evidencias. Participación en asesorías personalizadas con el equipo de Desarrollo Docente.</p>
+        <span class="timeline-goal">Meta: Portafolio base listo (secciones 1-6)</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--uc-gold);"></div>
+        <div class="timeline-period">Jul – Ago 2026</div>
+        <h3>Fase 3: Enriquecimiento y Revisión</h3>
+        <p>Elaboración de las secciones 7 a 12: Proyectos, Investigación, Competencias, Reflexión, Reconocimientos y Contacto. Revisión por pares y retroalimentación constructiva del equipo académico.</p>
+        <span class="timeline-goal">Meta: Retroalimentación recibida y mejoras aplicadas</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--uc-red);"></div>
+        <div class="timeline-period">Sep 2026 en adelante</div>
+        <h3>Fase 4: Integración y Uso Pleno</h3>
+        <p>Integración del portafolio en el proceso de evaluación docente institucional. Actualización continua mensual y uso del portafolio como herramienta de reflexión permanente y desarrollo profesional.</p>
+        <span class="timeline-goal">Meta: Uso pleno e integración en evaluación docente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>Universidad del Caribe · Panamá</strong>
+        <p>Formando profesionales de excelencia con compromiso ético y visión global. Tu portafolio es el reflejo de tu compromiso con la excelencia académica. Construirlo es construir tu legado como educador.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones del Portafolio</h4>
+        <ul>
+          <li><a href="#secciones">Portada e Identidad</a></li>
+          <li><a href="#secciones">Perfil Académico</a></li>
+          <li><a href="#secciones">Filosofía Educativa</a></li>
+          <li><a href="#secciones">Evidencias de Práctica</a></li>
+          <li><a href="#secciones">Reflexión y Mejora</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos de Apoyo</h4>
+        <ul>
+          <li><a href="#rubrica">Rúbrica de Calidad</a></li>
+          <li><a href="#mapa">Mapa Curricular</a></li>
+          <li><a href="#moodle">Guía Moodle</a></li>
+          <li><a href="#cronograma">Cronograma 2026</a></li>
+          <li><a href="#proceso">Proceso Cíclico</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Universidad del Caribe · Vicerrectoría Académica · Departamento de Desarrollo Docente</p>
+      <div class="accredited-badge">⭐ 100% Acreditada</div>
+    </div>
+  </div>
+</footer>
+
+<!-- PROGRESS TRACKER -->
+<div class="progress-tracker" id="progressTracker">
+  <div class="tracker-header">
+    <span>🎯 Mi Progreso</span>
+    <button class="tracker-close" onclick="this.parentElement.parentElement.style.display='none'">×</button>
+  </div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" id="trackerFill" style="width:0%"></div>
+  </div>
+  <div class="tracker-count" id="trackerCount">0 de 47 ítems completados</div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ─── ACCORDION ───
+function toggleAccordion(trigger) {
+  const item = trigger.parentElement;
+  const isOpen = item.classList.contains('open');
+  
+  // Close all
+  document.querySelectorAll('.accordion-item.open').forEach(i => {
+    if (i !== item) i.classList.remove('open');
+  });
+  
+  // Toggle current
+  item.classList.toggle('open', !isOpen);
+  
+  // Update nav
+  const idx = parseInt(item.dataset.section);
+  updateNav(idx);
+}
+
+function updateNav(activeIdx) {
+  const navItems = document.querySelectorAll('.sections-nav-item');
+  navItems.forEach((item, i) => {
+    item.classList.remove('active');
+    if (i === activeIdx) item.classList.add('active');
+  });
+}
+
+function scrollToSection(idx) {
+  const items = document.querySelectorAll('.accordion-item');
+  if (items[idx]) {
+    // Close all, open target
+    document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
+    items[idx].classList.add('open');
+    items[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateNav(idx);
+  }
+}
+
+// ─── PROGRESS ───
+function updateProgress() {
+  const allBoxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+  const checked = document.querySelectorAll('.checklist input[type="checkbox"]:checked');
+  const pct = Math.round((checked.length / allBoxes.length) * 100);
+  
+  document.getElementById('mainProgress').style.width = pct + '%';
+  document.getElementById('trackerFill').style.width = pct + '%';
+  document.getElementById('trackerCount').textContent = `${checked.length} de ${allBoxes.length} ítems completados`;
+  
+  // Check done nav items
+  const sections = document.querySelectorAll('.accordion-item');
+  const navItems = document.querySelectorAll('.sections-nav-item');
+  sections.forEach((section, i) => {
+    const boxes = section.querySelectorAll('input[type="checkbox"]');
+    const checkedBoxes = section.querySelectorAll('input[type="checkbox"]:checked');
+    if (boxes.length > 0 && boxes.length === checkedBoxes.length) {
+      navItems[i]?.classList.add('done');
+    } else {
+      navItems[i]?.classList.remove('done');
+    }
+  });
+  
+  // Strike through checked items
+  document.querySelectorAll('.checklist li').forEach(li => {
+    const cb = li.querySelector('input[type="checkbox"]');
+    li.classList.toggle('checked', cb?.checked);
+  });
+}
+
+// ─── SCROLL EFFECTS ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Back to top button
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backTop');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ─── SECTION COLORS ───
+const colors = [
+  'linear-gradient(135deg,#1769B5,#0D3B6E)',
+  'linear-gradient(135deg,#2E9E8E,#1769B5)',
+  'linear-gradient(135deg,#C8960C,#E8B800)',
+  'linear-gradient(135deg,#D94035,#B5341F)',
+  'linear-gradient(135deg,#7B4FBF,#5B2FA0)',
+  'linear-gradient(135deg,#0D8A6E,#0A6B54)',
+  'linear-gradient(135deg,#E8A020,#C87010)',
+  'linear-gradient(135deg,#1A7AB5,#0D5C90)',
+  'linear-gradient(135deg,#2E9E8E,#1A7A6E)',
+  'linear-gradient(135deg,#D94035,#A02A20)',
+  'linear-gradient(135deg,#8A5ABF,#6A3A9F)',
+  'linear-gradient(135deg,#2E9E8E,#0D3B6E)'
+];
+
+// Mock card colors
+const mockColors = [
+  '#EBF3FF','#E8F8F5','#FFF8E8','#F0E8FF',
+  '#FFF0EE','#E8F0FF','#F5F0FF','#E8FFF5',
+  '#FFF5E8','#E8F5FF','#F0FFF0','#FFE8F5'
+];
+
+document.querySelectorAll('.mock-card').forEach((card, i) => {
+  if (!card.style.background) card.style.background = mockColors[i % mockColors.length];
+});
+</script>
+</body>
+</html>
